@@ -1,0 +1,12 @@
+/* floonet.dev, Variant B: Floonet flame green.
+   Same sheet as styles.css; only the accent variables change.
+   #49F468 is the flame green lifted straight from floonet-logo.svg. */
+
+@import url("styles.css");
+
+:root {
+  --accent: #49F468;
+  --accent-deep: #2FCC52;
+  --accent-soft: rgba(73, 244, 104, 0.12);
+  --accent-line: rgba(73, 244, 104, 0.4);
+}

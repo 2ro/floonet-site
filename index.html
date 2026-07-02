@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Floonet: Nostr relays for the Grin community</title>
+<meta name="description" content="Floonet is a family of Nostr relays for the Grin community. They carry Grin payments and names as sealed, encrypted messages, private by default via the Nym mixnet, and anyone can run one.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Floonet: Nostr relays for the Grin community">
+<meta property="og:description" content="Relays that carry Grin payments and names over Nostr. Private by default. Anyone can run one.">
+<meta property="og:url" content="https://floonet.dev/">
+<meta property="og:image" content="https://floonet.dev/assets/favicon-256.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="256x256" href="assets/favicon-256.png">
+<link rel="apple-touch-icon" href="assets/favicon-256.png">
+<link rel="stylesheet" href="styles-green.css">
+</head>
+<body>
+
+<div class="wrap">
+  <header class="site">
+    <a class="brand" href="/">
+      <img class="mark" src="assets/floonet-logo-light.svg" alt="" aria-hidden="true">
+      <span class="word">Floonet</span>
+    </a>
+    <nav class="site" aria-label="Site">
+      <a href="#about">What is Floonet</a>
+      <a href="#stack">The stack</a>
+      <a href="#run">Run your own</a>
+      <a class="docs" href="https://docs.floonet.dev" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15.5H6.5A2.5 2.5 0 0 0 4 21V5.5z"/><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"/></svg>
+        Docs
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img class="hero-logo" src="assets/floonet-logo-light.svg" alt="The Floonet mark: a green flame burning in a hearth">
+      <span class="kicker">Free &amp; open source</span>
+      <h1>Nostr relays for the <span class="strike">Grin</span>&nbsp;community</h1>
+      <p class="lede">
+        Floonet is a family of relays that carry <strong>Grin</strong> payments and
+        names as sealed, end-to-end encrypted messages over <strong>nostr</strong>,
+        private by default through the <strong>Nym mixnet</strong>, and anyone
+        can run one.
+      </p>
+      <div class="cta-row">
+        <a class="btn-primary" href="https://goblin.st" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10.6l3.3-3.3 1.4 1.4-5.7 5.7-5.7-5.7 1.4-1.4 3.3 3.3V3h2zM5 19h14v2H5v-2z"/></svg>
+          Get the wallet
+        </a>
+        <a class="btn-ghost" href="https://docs.floonet.dev" rel="noopener">Run a relay</a>
+      </div>
+      <p class="micro">
+        Two packages: <code>floonet-strfry</code> · <code>floonet-rs</code>. Self-hostable, hardened, open.
+      </p>
+    </section>
+
+    <section id="about">
+      <div class="sec-head">
+        <h2>What is Floonet?</h2>
+        <p>Relays are the post offices of nostr. Floonet relays are post offices
+        tuned for the Grin community.</p>
+      </div>
+      <div class="about-cols">
+        <p>When a friend pays you with a wallet like Goblin, the payment travels
+        as a <strong>sealed, encrypted envelope</strong>. A Floonet relay holds
+        that envelope until your wallet comes online to collect it. The relay
+        never sees the amount, the sender, or the recipient. It only passes
+        envelopes, and it drops anything that is not one.</p>
+        <p>Floonet relays also host <strong>names</strong>, so friends can pay
+        <code>alice</code> instead of a long key, and they welcome connections
+        arriving through the <strong>Nym mixnet</strong>, so nobody watching the
+        wire can tell who is talking to whom.</p>
+        <p>There is no company behind Floonet. It is open software, and
+        <strong>anyone can run a relay</strong>: for their friends, their
+        community, or the whole network.</p>
+      </div>
+    </section>
+
+    <section id="stack">
+      <div class="sec-head">
+        <h2>The stack</h2>
+        <p>Four pieces, each doing one job.</p>
+      </div>
+      <div class="features">
+        <article class="feat">
+          <div class="glyph"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
+          <h3>Nostr</h3>
+          <p>The messaging network. Wallets talk by leaving sealed messages on
+          relays: payments, requests, and profiles all move this way, and your
+          wallet picks them up whenever it is online. No files to swap, no
+          meetups.</p>
+        </article>
+        <article class="feat">
+          <div class="glyph"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="5.2"/><circle cx="12" cy="12" r="2"/></svg></div>
+          <h3>Nym</h3>
+          <p>The privacy layer. Traffic reaches a Floonet relay through the Nym
+          mixnet: five hops of cover traffic that hide who is connecting to
+          whom, even from the relay itself.</p>
+        </article>
+        <article class="feat">
+          <div class="glyph"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.5 14.5c1 1.2 2.1 1.8 3.5 1.8s2.5-.6 3.5-1.8M8 9v1.5M16 9v1.5"/></svg></div>
+          <h3>Grin</h3>
+          <p>The money. Grin is confidential digital cash on Mimblewimble:
+          every amount is cryptographically hidden and there are no addresses
+          on the chain. Like handing someone cash, what you send stays between
+          the two of you.</p>
+        </article>
+        <article class="feat">
+          <div class="glyph"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"/></svg></div>
+          <h3>Names</h3>
+          <p>The address book. A name authority turns a key into a name like
+          <code>alice</code>, one name per key, yours until you release it.
+          Operators can hand names out free or ask a little Grin for them.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="run">
+      <div class="run-grid">
+        <div>
+          <h2>Run your own</h2>
+          <p>A Floonet relay is deliberately boring to operate: one Docker
+          Compose command or a single binary, one config file, and hardening
+          on by default. Names, privacy, and the strict event policy all come
+          in the box.</p>
+          <p>Everything you need is at
+          <a href="https://docs.floonet.dev" rel="noopener">docs.floonet.dev</a>.</p>
+          <a class="btn-primary" href="https://docs.floonet.dev" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15.5H6.5A2.5 2.5 0 0 0 4 21V5.5z"/><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"/></svg>
+            Read the docs
+          </a>
+        </div>
+        <div class="pkg-col">
+          <div class="pkg">
+            <h3><code>floonet-strfry</code></h3>
+            <p>Built on strfry (C++). The whole unit in one Compose stack:
+            relay, bundled name authority, and TLS proxy. The fast path for
+            most operators.</p>
+          </div>
+          <div class="pkg">
+            <h3><code>floonet-rs</code></h3>
+            <p>Built on nostr-rs-relay (Rust). A single binary with an
+            installer and a hardened systemd unit; the name authority is built
+            in.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="use">
+      <div class="use-card">
+        <h2>Use it</h2>
+        <p>The easiest way onto Floonet is <strong>Goblin</strong>, a private
+        wallet for Grin. Pay a name, and everything on this page, the relays,
+        the mixnet, the sealed envelopes, is handled for you.</p>
+        <a class="btn-primary" href="https://goblin.st" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+          goblin.st
+        </a>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img class="mark" src="assets/floonet-logo-light.svg" alt="" aria-hidden="true">
+        <p>Floonet is a family of Nostr relays for the Grin community. Open,
+        private by default, and yours to run.</p>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="https://docs.floonet.dev" rel="noopener">Docs</a></li>
+          <li><a href="https://grin.mw" rel="noopener">GRIN ツ</a></li>
+          <li><a href="https://github.com/nostr-protocol/nips" rel="noopener">Nostr NIPs</a></li>
+          <li><a href="https://nym.com" rel="noopener">Nym</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Use</h4>
+        <ul>
+          <li><a href="https://goblin.st" rel="noopener">Goblin wallet</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Source</h4>
+        <ul>
+          <li><a href="https://github.com/2ro" rel="noopener">floonet-strfry</a></li>
+          <li><a href="https://github.com/2ro" rel="noopener">floonet-rs</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 the Floonet project · Apache-2.0</span>
+      <span>Anyone can run one. ツ</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
