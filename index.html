@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Floonet: Nostr relays for the Grin community</title>
-<meta name="description" content="Floonet is a family of Nostr relays for the Grin community. They carry names and sealed, encrypted messages, private by default via the mixnet, and anyone can run one.">
+<meta name="description" content="Floonet is a family of Nostr relays for the Grin community. They carry names and sealed, encrypted messages, private by default over Tor, and anyone can run one.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Floonet: Nostr relays for the Grin community">
 <meta property="og:description" content="Nostr relays for the Grin community. Sealed messages and names, private by default. Anyone can run one.">
@@ -42,8 +42,8 @@
       <p class="lede">
         Floonet is a family of relays for the <strong>Grin</strong> community
         that carry names and sealed, end-to-end encrypted messages over
-        <strong>nostr</strong>, private by default through the
-        <strong>mixnet</strong>, and anyone can run one.
+        <strong>nostr</strong>, private by default over
+        <strong>Tor</strong>, and anyone can run one.
       </p>
       <div class="cta-row">
         <a class="btn-primary" href="https://goblin.st" rel="noopener">
@@ -71,8 +71,8 @@
         passes envelopes, and it drops anything that is not one.</p>
         <p>Floonet relays also host <strong>names</strong>, so friends can reach
         <code>alice</code> instead of a long key, and they welcome connections
-        arriving through the <strong>mixnet</strong>, so nobody watching the
-        wire can tell who is talking to whom.</p>
+        arriving over <strong>Tor</strong>, so nobody watching the
+        wire can see your address or where you are.</p>
         <p>There is no company behind Floonet. It is open software, and
         <strong>anyone can run a relay</strong>: for their friends, their
         community, or the whole network.</p>
@@ -95,10 +95,10 @@
         </article>
         <article class="feat">
           <div class="glyph"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="5.2"/><circle cx="12" cy="12" r="2"/></svg></div>
-          <h3>Mixnet</h3>
-          <p>The privacy layer. Traffic reaches a Floonet relay through the
-          mixnet: five hops of cover traffic that hide who is connecting to
-          whom, even from the relay itself.</p>
+          <h3>Tor</h3>
+          <p>The privacy layer. Wallets reach a Floonet relay over Tor, so the
+          relay never learns your IP or where you are. That is Tor's one job;
+          the relay and its sealed envelopes hide everything else.</p>
         </article>
         <article class="feat">
           <div class="glyph glyph-tsu" aria-hidden="true">ツ</div>
@@ -155,7 +155,7 @@
         <h2>Use it</h2>
         <p>The easiest way onto Floonet is <strong>Goblin</strong>, a private
         wallet for Grin. Pay a name, and everything on this page, the relays,
-        the mixnet, the sealed envelopes, is handled for you.</p>
+        Tor, the sealed envelopes, is handled for you.</p>
         <a class="btn-primary" href="https://goblin.st" rel="noopener">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
           goblin.st
@@ -179,7 +179,7 @@
           <li><a href="https://docs.floonet.dev" rel="noopener">Docs</a></li>
           <li><a href="https://grin.mw" rel="noopener">GRIN ツ</a></li>
           <li><a href="https://github.com/nostr-protocol/nips" rel="noopener">Nostr NIPs</a></li>
-          <li><a href="https://nym.com" rel="noopener">Mixnet</a></li>
+          <li><a href="https://www.torproject.org" rel="noopener">Tor</a></li>
         </ul>
       </div>
       <div>
